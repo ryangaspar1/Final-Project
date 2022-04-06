@@ -1,0 +1,50 @@
+# Proposal
+
+## What will (likely) be the title of your project?
+
+NFL Matchup Score Simulator
+
+## In just a sentence or two, summarize your project. (E.g., "A website that lets you buy and sell stocks.")
+
+The project will focus on using 2021 NFL stats to predict the score of NFL games between two different teams accurately and precisely to help people 
+with sports betting.
+
+## In a paragraph or more, detail your project. What will your software do? What features will it have? How will it be executed?
+
+The project will download NFL team stats as a csv file from pro-reference to help mimic the score of a game. The stats will include total offense
+and defense as well as turnover ratios and many different statistical categories. Dictionaries will be used to help with team 1 and 2 input to use
+team name or city or 3 letter city abbreviation. For and While Loops will be used to help simulate the score using these statistics. 
+
+## If planning to combine 1051's final project with another course's final project, with which other course? And which aspect(s) of your proposed project would relate to 1051, and which aspect(s) would relate to the other course?
+
+N/A
+
+## If planning to collaborate with 1 or 2 classmates for the final project, list their names, email addresses, and the names of their assigned TAs below.
+
+Adam Holtsmaster
+adam.holtsmaster@temple.edu
+Joanne Nichols
+
+## In the world of software, most everything takes longer to implement than you expect. And so it's not uncommon to accomplish less in a fixed amount of time than you hope.
+
+### In a sentence (or list of features), define a GOOD outcome for your final project. I.e., what WILL you accomplish no matter what?
+
+Being able to have scores pop up for each team.
+
+### In a sentence (or list of features), define a BETTER outcome for your final project. I.e., what do you THINK you can accomplish before the final project's deadline?
+
+Being able to have scores that make sense for each team.
+
+### In a sentence (or list of features), define a BEST outcome for your final project. I.e., what do you HOPE to accomplish before the final project's deadline?
+
+Having an algorithm that accurately predicts scores of game that are comparable to what actually happened this football year.
+
+## In a paragraph or more, outline your next steps. What new skills will you need to acquire? What topics will you need to research? If working with one of two classmates, who will do what?
+
+I hope to learn various statistical analysis skills within sports that I can use with a different range of sports that I can mimic this sort of project.
+I hope that I can use file reading to accurately assess sports information and be able to make something similar to how Vegas makes "spreads" for game
+and as a tool people can use for sports betting. I will need to research how vegas writes these algorithms what statistical categories are of most 
+importance to use. I will also need to research how to implement these stats quantitatively to a score and how different aspects of code are used.
+Adam and I are working together and we are friends, thus we can sit down with each other collarborate on the code together. I plan to be more of the file reader 
+and write the code with him while he is the sportsmaster who will assess how to implement these stats accurately into a code as he is a data analytics major
+and he is amazing with numbers and how to quantitatively assess these stats into a score.
