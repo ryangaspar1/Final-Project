@@ -1,0 +1,132 @@
+#Ryan B Gaspar and Adam Holtsmaster
+
+#2021 NFL Score Simulator
+
+nfl_data = open("nfloffense.csv","r")
+nfllines = nfl_data.readlines()
+print(nfllines)
+for nfllines in nfl_data:
+    print(nfllines)
+    
+
+nflteams ={
+            "Dallas Cowboys" : 31,
+            "Green Bay Packers" : 26,
+            "Tampa Bay Buccaneers" : 30,
+            "Buffalo Bills" : 28,
+            "Kansas City Chiefs" : 28,
+            "Los Angeles Chargers" : 28,
+            "New England Patriots" : 27,
+            "Cincinnati Bengals" : 27,
+            "Los Angeles Rams" : 27,
+            "Indianapolis Colts" : 27,
+            "Arizona Cardinals" : 26,
+            "Philadelphia Eagles" : 26,
+            "San Francisco 49ers" : 25,
+            "Minnesota Vikings" : 25,
+            "Tennessee Titans" : 25,
+            "Seattle Seahawks" : 23,
+            "Baltimore Ravens" : 23,
+            "Las Vegas Raiders" : 22,
+            "New Orleans Saints" : 21,
+            "Cleveland Browns" : 21,
+            "Pittsburgh Steelers" : 20,
+            "Miami Dolphins" : 20,
+            "Denver Broncos" : 20,
+            "Washington Football Team" : 20,
+            "Detroit Lions" : 19,
+            "Atlanta Falcons" : 18,
+            "Chicago Bears" : 18,
+            "New York Jets" : 18,
+            "Carolina Panthers" : 18,
+            "Houston Texans" : 16,
+            "New York Giants" : 15,
+            "Jacksonville Jaguars" : 15
+}
+
+validNFLteams = ["Dallas Cowboys",
+                 "Tampa Bay Buccaneers",
+                 "Buffalo Bills",
+                 "Kansas City Chiefs",
+                 "Los Angeles Chargers",
+                 "New England Patriots",
+                 "Cincinnati Bengals",
+                 "Los Angeles Rams",
+                 "Indianapolis Colts",
+                 "Green Bay Packers",
+                 "Arizona Cardinals",
+                 "Philadelphia Eagles",
+                 "San Francisco 49ers",
+                 "Minnesota Vikings",
+                 "Tennessee Titans",
+                 "Seattle Seahawks",
+                 "Baltimore Ravens",
+                 "Las Vegas Raiders",
+                 "New Orleans Saints",
+                 "Cleveland Browns",
+                 "Pittsburgh Steelers",
+                 "Miami Dolphins",
+                 "Denver Broncos",
+                 "Washington Football Team",
+                 "Detroit Lions",
+                 "Atlanta Falcons",
+                 "Chicago Bears",
+                 "New York Jets",
+                 "Carolina Panthers",
+                 "Houston Texans",
+                 "New York Giants",
+                 "Jacksonville Jaguars",
+]
+
+
+
+
+
+##for nfllines in nfllines[2:]:
+##    nfllines = nfllines.split(",")
+##    points = float(nfllines[4])
+##    yards = float(nfllines[6])
+##    turnovers = float(nfllines[10])
+##    passingyards = float(nfllines[16])
+##    passingTDs = float(nfllines[18])
+##    rushingyards = float(nfllines[24])
+##    rushingTDs = float(nfllines[26])
+
+
+def nflpredictor():
+    while True:
+        team1 = input("Enter NFL team name:\n")
+        while team1 != "Dallas Cowboys" and team1 !="Tampa Bay Buccaneers" and team1 !="Buffalo Bills" and team1 !="Kansas City Chiefs" and team1 !="Los Angeles Chargers" and team1 !="New England Patriots" and team1 !="Cincinnati Bengals" and team1 !="Los Angeles Rams" and team1 !="Indianapolis Colts" and team1 !="Green Bay Packers" and team1 !="Arizona Cardinals" and team1 !="Philadelphia Eagles" and team1 !="San Francisco 49ers" and team1 !="Minnesota Vikings" and team1 !="Tennessee Titans" and team1 !="Seattle Seahawks" and team1 !="Baltimore Ravens" and team1 !="Las Vegas Raiders" and team1 !="New Orleans Saints" and team1 !="Cleveland Browns" and team1 !="Pittsburgh Steelers" and team1 !="Miami Dolphins" and team1 !="Denver Broncos" and team1 !="Washington Football Team" and team1 !="Detroit Lions" and team1 !="Atlanta Falcons" and team1 !="Chicago Bears" and team1 !="New York Jets" and team1 !="Carolina Panthers" and team1 !="Houston Texans" and team1 !="New York Giants" and team1 !="Jacksonville Jaguars":
+            print("Not a valid NFL team")
+            team1 = input("Enter NFL team name:\n")
+        team2 = input("Enter second NFL team name:\n")
+        while team2 != "Dallas Cowboys" and team2 != "Tampa Bay Buccaneers" and team2 != "Buffalo Bills" and team2 !="Kansas City Chiefs" and team2 !="Los Angeles Chargers" and team2 !="New England Patriots" and team2 !="Cincinnati Bengals" and team2 !="Los Angeles Rams" and team2 !="Indianapolis Colts" and team2 !="Green Bay Packers" and team2 !="Arizona Cardinals" and team2 !="Philadelphia Eagles" and team2 !="San Francisco 49ers" and team2 !="Minnesota Vikings" and team2 !="Tennessee Titans" and team2 !="Seattle Seahawks" and team2 !="Baltimore Ravens" and team2 !="Las Vegas Raiders" and team2 !="New Orleans Saints" and team2 !="Cleveland Browns" and team2 !="Pittsburgh Steelers" and team2 !="Miami Dolphins" and team2 !="Denver Broncos" and team2 !="Washington Football Team" and team2 !="Detroit Lions" and team2 !="Atlanta Falcons" and team2 !="Chicago Bears" and team2 !="New York Jets" and team2 !="Carolina Panthers" and team2 !="Houston Texans" and team2 !="New York Giants" and team2 !="Jacksonville Jaguars":
+            print("Not a valid NFL team")
+            team2 = input("Enter second NFL team name:\n")
+        team1pts = nflteams[team1]
+        team2pts = nflteams[team2]
+        print(team1, "-",team1pts, team2,"-",team2pts)
+        if team1pts > team2pts:
+            print(team1, "win")
+        if team1pts < team2pts:
+            print(team2,"win")
+        if team1pts == team2pts:
+            print("Tie")
+        spread = -(team1pts - team2pts) - 0.50
+        if spread >0:
+            spread = "plus",spread + 1
+        print("The spread of the game is",team1,spread)
+
+        redo = input('\nDo you want to enter another game? y/yes/n/no')
+
+        while redo != 'y' and redo != 'yes' and redo != 'n' and redo != 'no':
+            print('Enter y, yes, n, or no')
+            redo = input('Do you want to enter another game? y/yes/n/no\n')
+
+        if redo != 'y' and redo != 'yes':
+            break
+
+        
+nflpredictor()
+
+
